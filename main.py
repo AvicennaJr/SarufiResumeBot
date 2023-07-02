@@ -15,7 +15,7 @@ app = Client(
 
 
 @app.on_message()
-async def echo(client, message):
+async def reply(client, message):
     response = sarufi_bot.respond(message.text)['actions'][0]['send_message'][0]
     await message.reply(response)
 
